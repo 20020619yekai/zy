@@ -13,7 +13,7 @@
         }
         body {
             text-align: center;
-			background-image:url('https://pic3.zhimg.com/v2-acab3db0d1c2ac58b7aa93196cd42aee_r.jpg?source=1940ef5c');
+			background:	#7FFFD4;
        
         }
         input#pre {
@@ -105,6 +105,8 @@
 	border-style:dashed;
 	}
     </style>
+    <script src="data.js">
+    </script>
 </head>
 
 <body>
@@ -127,8 +129,8 @@
 
 <script>
     /*****定义全局变量*****/
- var mediaData = {
-  audioPath: "https:/jxzy-dmxy.jxstnu.edu.cn/",
+var mediaData = {
+  audioPath: "https://jxzy-dmxy.jxstnu.edu.cn/",
   audioFiles: [
 	{fileName:"LinuxCMD-0.mp3" ,
      titles : ["preface","thanks","history","preface","thanks","history"] ,
@@ -160,10 +162,10 @@
     Model.UI.audioDom.audioLength = mediaData.audioFiles.length;
 
     Model.UI.videoDom.getURL = function () {
-        return mediaData.videoPath + mediaData.videoFiles[Model.i]+".mp4";
+        return mediaData.videoPath+mediaData.videoFiles[Model.i]+".mp4";
     }
     Model.UI.audioDom.getURL = function () {
-        return mediaData.audioPath + mediaData.audioFiles[Model.i].filename;
+        return mediaData.audioPath + mediaData.audioFiles[Model.i].fileName;
     }
 
       // 第七次作业更新任务1— — — —全屏播放视频
@@ -269,7 +271,7 @@
             i--;
         }
         // 2.4 — — — —每次切换视频需要更新目录内容
-		Model.showMediaNum(i);
+        Model.showMediaNum(i);
         Model.i = i;
         file.src = file.getURL();
         file.play();
