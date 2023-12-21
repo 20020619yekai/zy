@@ -1,6 +1,6 @@
 var mediaData = {
 	//音频数据
-    audioPath : "https:/jxzy-dmxy.jxstnu.edu.cn/",//路径
+    audioPath : "https://jxzy-dmxy.jxstnu.edu.cn/",//路径
 	audioFiles : [{filename:'LinuxCMD-0.mp3'},{filename:'LinuxCMD-1.mp3'},{filename:'LinuxCMD-2.mp3'},{filename:'linuxCMD-3.mp3'},
 		{filename:'linuxCMD-5.mp3',
 		 title:["begin","blank","content","thanks","end"],
